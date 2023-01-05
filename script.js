@@ -28,8 +28,8 @@ window.addEventListener("load", windowLoad);
 
 function windowLoad(){
 
-   function digitsCountersInit(digitsCountersInit) {
-      let digitsCounters = digitsCountersInit ? digitsCountersInitc : document.querySelectorAll("[data-digits-counter]");
+   function digitsCountersInit(digitsCountersItems) {
+      let digitsCounters = digitsCountersItems ? digitsCountersItems : document.querySelectorAll("[data-digits-counter]");
       if (digitsCounters) {
          digitsCounters.forEach(digitsCounter => {
             digitsCountersAnimate(digitsCounter);
@@ -52,7 +52,7 @@ function windowLoad(){
       };
       window.requestAnimationFrame(step);
    }
-   // digitsCountersInit();
+
    let options = {
       threshold: 0.3
    }
@@ -64,6 +64,7 @@ function windowLoad(){
             if (digitsCountersItems.length) {
                digitsCountersInit(digitsCountersItems);
             }
+            observer.unobserve(targetElement);
          }
       });
    }, options);
@@ -75,3 +76,7 @@ function windowLoad(){
       });
    }
 }
+
+
+
+

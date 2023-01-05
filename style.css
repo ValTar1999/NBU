@@ -23,7 +23,11 @@ header{
    font-size: 6rem;
    color: #dc3545;
    font-weight: 500;
+
 }
+
+
+
 
 .header-subtitle{
    font-size: 2.5rem;
@@ -77,6 +81,7 @@ header{
 	.advantages__column {
 		flex: 0 1 50%;
 	}
+
 }
 @media (max-width: 560px) {
 	.advantages__column {
@@ -194,10 +199,14 @@ header{
 
 .card-title {
    color: white;
+   font-size: 1.5rem;
+   font-weight: 500;
+   text-decoration: underline;
 }
 
 .caard-subtitle {
    color: white;
+   margin-top: 1.5rem;
 }
 
 /* contacts */
@@ -217,9 +226,29 @@ header{
 }
 .contact-info {
    display: grid;
-   grid-template-columns: 30% 50%;
+   grid-template-columns: 1fr 1fr;
    gap: 12%;
 }
+
+@media (max-width:1020px) {
+   .contact-info{
+      grid-template-columns: 1fr;
+      gap: 2rem;
+   }
+
+   .contact-cards{
+      gap:2rem;
+   }
+
+   .cards .card-image{
+      display: none;
+   }
+      
+   
+}
+
+
+
 .contact-cards {
    display: flex;
    flex-direction: column;
@@ -234,8 +263,7 @@ header{
    border-radius: 2rem;
    box-shadow: rgba(162, 165, 167, 0.473) 0px 1px 2px 0px, rgba(200, 206, 211, 0.555) 0px 1px 3px 1px;
 }
-.cont-logo {
-}
+
 .cont-title {
    font-size: 20px;
 	line-height: 142%;
@@ -248,9 +276,6 @@ header{
 	line-height: 150%;
 }
 
-.cont-email{
-
-}
 
 
 form{
