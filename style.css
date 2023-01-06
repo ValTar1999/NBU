@@ -27,8 +27,6 @@ header{
 }
 
 
-
-
 .header-subtitle{
    font-size: 2.5rem;
    font-weight: 400;
@@ -126,6 +124,8 @@ header{
 
 .header-block__sub-title{
    color: white;
+   font-size: 1.2rem;
+   font-weight: 500;
 }
 
 /* sugestion */
@@ -240,11 +240,10 @@ header{
       gap:2rem;
    }
 
-   .cards .card-image{
-      display: none;
+   .cards{
+      display: flex;
+      flex-direction: column;
    }
-      
-   
 }
 
 
